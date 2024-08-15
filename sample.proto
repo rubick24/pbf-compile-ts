@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+enum CharCategory {
+  X = 0; 
+  Y = 1; 
+  Z = 2; 
+}
+
+message Foo {
+  CharCategory char_category = 1;
+  repeated Bar bar = 2;
+}
+
+message Bar {
+  string a = 1;
+  int64 b = 2;
+  bytes body = 1;
+  map<string, string> meta = 4; //
+}
